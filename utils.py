@@ -71,7 +71,7 @@ def extract_stft(audio, sampling_rate=16000):
 
 
 # noresqa and noresqa-mos prediction calls
-def model_prediction_noresqa(test_feat, nmr_feat):
+def model_prediction_noresqa(test_feat, nmr_feat, model):
 
     intervals_sdr = np.arange(0.5, 40, 1)
 
@@ -89,7 +89,7 @@ def model_prediction_noresqa(test_feat, nmr_feat):
     return pout, qout
 
 
-def model_prediction_noresqa_mos(test_feat, nmr_feat):
+def model_prediction_noresqa_mos(test_feat, nmr_feat, model):
 
     with torch.no_grad():
         score = model(nmr_feat, test_feat).detach().cpu().numpy()[0]
