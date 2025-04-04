@@ -133,6 +133,7 @@ def feats_loading(test_path, ref_path=None, noresqa_or_noresqaMOS=0):
         
         # audio_ref = audio_loading(ref_path)
         # audio_test = audio_loading(test_path)
+        audio_ref, audio_test = ref_path, test_path
         audio_ref, audio_test = check_size(audio_ref, audio_test)
 
         if noresqa_or_noresqaMOS == 0:
