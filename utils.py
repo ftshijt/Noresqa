@@ -130,9 +130,9 @@ def check_size(audio_ref, audio_test):
 def feats_loading(test_path, ref_path=None, noresqa_or_noresqaMOS=0):
 
     if noresqa_or_noresqaMOS == 0 or noresqa_or_noresqaMOS == 1:
-
-        audio_ref = audio_loading(ref_path)
-        audio_test = audio_loading(test_path)
+        
+        # audio_ref = audio_loading(ref_path)
+        # audio_test = audio_loading(test_path)
         audio_ref, audio_test = check_size(audio_ref, audio_test)
 
         if noresqa_or_noresqaMOS == 0:
